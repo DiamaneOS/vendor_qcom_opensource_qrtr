@@ -1,5 +1,8 @@
 cc_library {
     name: "libqrtr",
+    // Installed as libqrtr_linux_msm.so, so it can sit next to a vendor
+    // libqrtr.so that other libraries on the device link.
+    stem: "libqrtr_linux_msm",
     vendor: true,
     srcs: [
         "lib/logging.c",
